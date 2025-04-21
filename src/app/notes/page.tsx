@@ -358,7 +358,7 @@ export default function NotesPage() {
             </h2>
             <button 
               onClick={() => setShowCreateModal(true)}
-              className="bg-gradient-to-r from-amber-400 to-yellow-300 text-indigo-900 px-4 py-2 rounded-full font-semibold hover:from-amber-500 hover:to-yellow-400 transition-all duration-300 flex items-center"
+              className="bg-blue-600 text-white px-4 py-2 rounded-full font-semibold hover:bg-blue-700 transition-all duration-300 flex items-center"
             >
               <FaPlus className="mr-2" /> Create Note
             </button>
@@ -528,7 +528,7 @@ export default function NotesPage() {
                 Cancel
               </button>
               <button 
-                className="px-4 py-2 bg-gradient-to-r from-amber-400 to-yellow-300 text-indigo-900 rounded-md font-semibold hover:from-amber-500 hover:to-yellow-400 transition-all duration-300"
+                className="px-4 py-2 bg-blue-600 text-white rounded-md font-semibold hover:bg-blue-700 transition-all duration-300"
               >
                 Create Note
               </button>

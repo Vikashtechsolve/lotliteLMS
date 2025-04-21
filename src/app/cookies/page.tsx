@@ -2,8 +2,8 @@ import React from 'react';
 import Link from 'next/link';
 
 export const metadata = {
-  title: 'Cookie Policy | Vikash Tech Solutions',
-  description: 'Cookie policy for Vikash Tech Solutions platform and services.',
+  title: 'Cookie Policy | Lotlite Technology',
+  description: 'Cookie policy for Lotlite Technology platform and services.',
 };
 
 export default function CookiesPage() {

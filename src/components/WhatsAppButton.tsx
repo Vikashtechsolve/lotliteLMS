@@ -16,8 +16,8 @@ const WhatsAppButton = () => {
   }, []);
 
   const handleClick = () => {
-    // WhatsApp number: +91 74394 74237
-    window.open('https://wa.me/917439474237', '_blank');
+    // WhatsApp number: +91 98765 43210
+    window.open('https://wa.me/919876543210', '_blank');
   };
 
   return (

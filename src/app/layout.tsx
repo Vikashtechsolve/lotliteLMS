@@ -12,7 +12,7 @@ const inter = Inter({
 });
 
 export const metadata: Metadata = {
-  title: "Vikash Tech Solutions - Learn Coding the Right Way",
+  title: "Lotlite Technology - Learn Coding the Right Way",
   description: "Learn coding with practical exercises and real-world projects.",
 };
 

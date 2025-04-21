@@ -10,7 +10,7 @@ const testimonials = [
     name: 'Arjun Sharma',
     role: 'Frontend Developer',
     image: '/Images/testimonial1.jpg',
-    quote: 'Vikash Tech Solutions transformed my career. The practical approach and real-world projects helped me land my dream job at a top tech company.',
+    quote: 'Lotlite Technology transformed my career. The practical approach and real-world projects helped me land my dream job at a top tech company.',
     rating: 5
   },
   {
@@ -18,7 +18,7 @@ const testimonials = [
     name: 'Priya Patel',
     role: 'Data Scientist',
     image: '/Images/testimonial2.jpg',
-    quote: 'As someone with no prior coding experience, Vikash Tech Solutions made learning to code accessible and enjoyable. The community support is incredible.',
+    quote: 'As someone with no prior coding experience, Lotlite Technology made learning to code accessible and enjoyable. The community support is incredible.',
     rating: 5
   },
   {
@@ -26,7 +26,7 @@ const testimonials = [
     name: 'Rahul Verma',
     role: 'Full Stack Developer',
     image: '/Images/testimonial3.jpg',
-    quote: 'The data science courses at Vikash Tech Solutions are comprehensive and up-to-date with industry standards. I learned more in 3 months than I did in a year of self-study.',
+    quote: 'The data science courses at Lotlite Technology are comprehensive and up-to-date with industry standards. I learned more in 3 months than I did in a year of self-study.',
     rating: 5
   },
   {
@@ -34,7 +34,7 @@ const testimonials = [
     name: 'Ananya Reddy',
     role: 'Backend Developer',
     image: '/Images/testimonial4.jpg',
-    quote: 'I was struggling with backend concepts until I found Vikash Tech Solutions. Their structured approach and hands-on projects made everything click.',
+    quote: 'I was struggling with backend concepts until I found Lotlite Technology. Their structured approach and hands-on projects made everything click.',
     rating: 5
   },
   {
@@ -42,7 +42,7 @@ const testimonials = [
     name: 'Vikram Malhotra',
     role: 'DevOps Engineer',
     image: '/Images/testimonial5.jpg',
-    quote: 'The DevOps course at Vikash Tech Solutions is gold. It covers everything from basics to advanced concepts with practical labs that mirror real-world scenarios.',
+    quote: 'The DevOps course at Lotlite Technology is gold. It covers everything from basics to advanced concepts with practical labs that mirror real-world scenarios.',
     rating: 5
   },
   {
@@ -79,7 +79,7 @@ const Testimonials = () => {
       <div className="container mx-auto px-4 relative z-10">
         <div className="text-center mb-16">
           <h2 className="text-3xl font-bold text-center mb-12 bg-gradient-to-r from-amber-400 to-yellow-300 bg-clip-text text-transparent">
-            Hear from our community of developers who have transformed their careers with Vikash Tech Solutions.
+            Hear from our community of developers who have transformed their careers with Lotlite Technology.
           </h2>
           <h2 className="text-4xl font-bold text-gray-800 mb-4 relative inline-block">
             What Our Students Say
