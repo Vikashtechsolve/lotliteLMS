@@ -14,6 +14,9 @@ const inter = Inter({
 export const metadata: Metadata = {
   title: "Lotlite Technology - Learn Coding the Right Way",
   description: "Learn coding with practical exercises and real-world projects.",
+  icons: {
+    icon: '/favicon.ico',
+  },
 };
 
 export default function RootLayout({
