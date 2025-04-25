@@ -18,7 +18,7 @@ const mockNotes: Note[] = [
     isBookmarked: false,
     createdAt: "2024-03-15",
     updatedAt: "2024-03-15",
-    price: 85
+    price: 99
   },
   {
     id: 2,
@@ -31,7 +31,7 @@ const mockNotes: Note[] = [
     isBookmarked: false,
     createdAt: "2024-03-14",
     updatedAt: "2024-03-14",
-    price: 80
+    price: 99
   },
   {
     id: 3,
@@ -44,7 +44,7 @@ const mockNotes: Note[] = [
     isBookmarked: false,
     createdAt: "2024-03-13",
     updatedAt: "2024-03-13",
-    price: 90
+    price: 99
   },
   {
     id: 4,
@@ -57,7 +57,7 @@ const mockNotes: Note[] = [
     isBookmarked: false,
     createdAt: "2024-03-12",
     updatedAt: "2024-03-12",
-    price: 85
+    price: 99
   },
   {
     id: 5,
@@ -70,7 +70,7 @@ const mockNotes: Note[] = [
     isBookmarked: false,
     createdAt: "2024-03-11",
     updatedAt: "2024-03-11",
-    price: 88
+    price: 99
   },
   {
     id: 6,
@@ -83,7 +83,7 @@ const mockNotes: Note[] = [
     isBookmarked: false,
     createdAt: "2024-03-10",
     updatedAt: "2024-03-10",
-    price: 82
+    price: 99
   },
   {
     id: 7,
@@ -96,7 +96,7 @@ const mockNotes: Note[] = [
     isBookmarked: false,
     createdAt: "2024-03-09",
     updatedAt: "2024-03-09",
-    price: 87
+    price: 99
   },
   {
     id: 8,
@@ -109,7 +109,7 @@ const mockNotes: Note[] = [
     isBookmarked: false,
     createdAt: "2024-03-08",
     updatedAt: "2024-03-08",
-    price: 90
+    price: 99
   },
   {
     id: 9,
@@ -122,7 +122,7 @@ const mockNotes: Note[] = [
     isBookmarked: false,
     createdAt: "2024-03-07",
     updatedAt: "2024-03-07",
-    price: 85
+    price: 99
   },
   {
     id: 10,
@@ -135,7 +135,7 @@ const mockNotes: Note[] = [
     isBookmarked: false,
     createdAt: "2024-03-06",
     updatedAt: "2024-03-06",
-    price: 88
+    price: 99
   },
   {
     id: 11,
@@ -148,7 +148,7 @@ const mockNotes: Note[] = [
     isBookmarked: false,
     createdAt: "2024-03-05",
     updatedAt: "2024-03-05",
-    price: 83
+    price: 99
   },
   {
     id: 12,
@@ -161,7 +161,7 @@ const mockNotes: Note[] = [
     isBookmarked: false,
     createdAt: "2024-03-04",
     updatedAt: "2024-03-04",
-    price: 90
+    price: 99
   }
 ];
 
@@ -195,11 +195,11 @@ interface Note {
 export default function NotesPage() {
   const [searchTerm, setSearchTerm] = useState("");
   const [selectedCategory, setSelectedCategory] = useState("All Notes");
-  const [filteredNotes, setFilteredNotes] = useState<Note[]>(mockNotes);
+  const [notesList, setNotesList] = useState<Note[]>(mockNotes);
   const [isLoading, setIsLoading] = useState(true);
   const [activeFilter, setActiveFilter] = useState("all");
   const [showCreateModal, setShowCreateModal] = useState(false);
-  const [notesList, setNotesList] = useState<Note[]>(mockNotes);
+  const [filteredNotes, setFilteredNotes] = useState<Note[]>(mockNotes);
 
   // Simulate loading
   useEffect(() => {
@@ -283,8 +283,8 @@ export default function NotesPage() {
               Premium Study Notes
             </h1>
             <p className="text-xl mb-8 text-amber-100">
-              Access comprehensive study notes, cheat sheets, and resources to enhance your learning experience.
-              All notes priced between ₹80-90 for maximum accessibility.
+            Access comprehensive study notes, cheat sheets, and resources to enhance your learning experience.
+            All notes priced at a maximum of ₹100 for maximum accessibility.
             </p>
             
             {/* Search Bar */}
@@ -332,17 +332,17 @@ export default function NotesPage() {
             </div>
             
             <div className="flex items-center space-x-2">
-              <span className="font-medium text-gray-700">Sort by:</span>
+              <span className="font-medium text-indigo-600">Sort by:</span>
               <select 
                 title="Sort notes by"
-                className="px-3 py-2 rounded-md border border-gray-300 focus:outline-none focus:ring-2 focus:ring-indigo-500"
+                className="px-3 py-2 rounded-md border border-gray-300 focus:outline-none focus:ring-2 focus:ring-indigo-500 text-indigo-600"
                 value={activeFilter}
                 onChange={(e) => setActiveFilter(e.target.value)}
               >
-                <option value="all">All Notes</option>
-                <option value="popular">Most Popular</option>
-                <option value="recent">Most Recent</option>
-                <option value="bookmarked">Bookmarked</option>
+                <option value="all" className="text-indigo-600">All Notes</option>
+                <option value="popular" className="text-indigo-600">Most Popular</option>
+                <option value="recent" className="text-indigo-600">Most Recent</option>
+                <option value="bookmarked" className="text-indigo-600">Bookmarked</option>
               </select>
             </div>
           </div>
@@ -358,7 +358,7 @@ export default function NotesPage() {
             </h2>
             <button 
               onClick={() => setShowCreateModal(true)}
-              className="bg-blue-600 text-white px-4 py-2 rounded-full font-semibold hover:bg-blue-700 transition-all duration-300 flex items-center"
+              className="bg-gradient-to-r from-amber-400 to-yellow-300 text-indigo-900 px-4 py-2 rounded-full font-semibold hover:from-amber-500 hover:to-yellow-400 transition-all duration-300 flex items-center"
             >
               <FaPlus className="mr-2" /> Create Note
             </button>
@@ -372,54 +372,67 @@ export default function NotesPage() {
             <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
               {sortedNotes.map((note) => (
                 <div key={note.id} className="bg-white rounded-xl shadow-lg p-6 hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1 border border-gray-100">
-                  <div className="flex justify-between items-start mb-4">
-                    <div>
-                      <h3 className="text-xl font-semibold text-gray-800 mb-2">{note.title}</h3>
-                      <p className="text-gray-600 mb-4 line-clamp-2">{note.content}</p>
+                  <div className="flex flex-col h-full">
+                    <div className="flex justify-between items-start mb-4">
+                      <h3 className="text-xl font-semibold text-gray-800">{note.title}</h3>
+                      <div className="flex space-x-2">
+                        <button
+                          title={`${note.isLiked ? 'Unlike' : 'Like'} note`}
+                          onClick={() => handleLikeToggle(note.id)}
+                          className={`p-2 rounded-full ${
+                            note.isLiked ? 'text-red-500' : 'text-gray-400'
+                          } hover:bg-gray-100`}
+                        >
+                          <FaHeart />
+                        </button>
+                        <button
+                          title={`${note.isBookmarked ? 'Remove bookmark' : 'Bookmark'} note`}
+                          onClick={() => handleBookmarkToggle(note.id)}
+                          className={`p-2 rounded-full ${
+                            note.isBookmarked ? 'text-blue-500' : 'text-gray-400'
+                          } hover:bg-gray-100`}
+                        >
+                          <FaBookmark />
+                        </button>
+                      </div>
                     </div>
-                    <div className="flex space-x-2">
-                      <button
-                        title={`${note.isLiked ? 'Unlike' : 'Like'} note`}
-                        onClick={() => handleLikeToggle(note.id)}
-                        className={`p-2 rounded-full ${
-                          note.isLiked ? 'text-red-500' : 'text-gray-400'
-                        } hover:bg-gray-100`}
-                      >
-                        <FaHeart />
-                      </button>
-                      <button
-                        title={`${note.isBookmarked ? 'Remove bookmark' : 'Bookmark'} note`}
-                        onClick={() => handleBookmarkToggle(note.id)}
-                        className={`p-2 rounded-full ${
-                          note.isBookmarked ? 'text-blue-500' : 'text-gray-400'
-                        } hover:bg-gray-100`}
-                      >
-                        <FaBookmark />
-                      </button>
+                    
+                    <p className="text-gray-600 mb-4 line-clamp-2 flex-grow">{note.content}</p>
+                    
+                    <div className="flex flex-wrap gap-2 mb-4">
+                      {note.tags.map((tag) => (
+                        <span
+                          key={tag}
+                          className="px-3 py-1 bg-gray-100 text-gray-600 rounded-full text-sm"
+                        >
+                          {tag}
+                        </span>
+                      ))}
                     </div>
-                  </div>
-                  <div className="flex flex-wrap gap-2 mb-4">
-                    {note.tags.map((tag) => (
-                      <span
-                        key={tag}
-                        className="px-3 py-1 bg-gray-100 text-gray-600 rounded-full text-sm"
-                      >
-                        {tag}
-                      </span>
-                    ))}
-                  </div>
-                  <div className="flex items-center justify-between">
-                    <div className="flex items-center gap-4 text-sm text-gray-500">
-                      <span className="flex items-center gap-1">
-                        <FaHeart className={note.isLiked ? "text-red-500" : ""} />
-                        {note.likes}
-                      </span>
-                      <span className="flex items-center gap-1">
-                        <FaBookmark className={note.isBookmarked ? "text-blue-500" : ""} />
-                      </span>
-                    </div>
-                    <div className="text-lg font-bold text-indigo-600">
-                      ₹{note.price}
+                    
+                    <div className="flex items-center justify-between mt-auto">
+                      <div className="flex items-center gap-4 text-sm text-gray-500">
+                        <button
+                          onClick={() => handleLikeToggle(note.id)}
+                          className="flex items-center gap-1 hover:text-red-500 transition-colors"
+                          title={note.isLiked ? "Unlike note" : "Like note"}
+                          aria-label={note.isLiked ? "Unlike note" : "Like note"}
+                        >
+                          <FaHeart className={note.isLiked ? "text-red-500" : ""} />
+                          {note.likes}
+                        </button>
+                        <button
+                          onClick={() => handleBookmarkToggle(note.id)}
+                          className="flex items-center gap-1 hover:text-blue-500 transition-colors"
+                          title={note.isBookmarked ? "Remove bookmark" : "Bookmark note"}
+                          aria-label={note.isBookmarked ? "Remove bookmark" : "Bookmark note"}
+                        >
+                          <FaBookmark className={note.isBookmarked ? "text-blue-500" : ""} />
+                        </button>
+                      </div>
+                      <div className="text-lg font-bold text-indigo-600">
+                        ₹99
+                      </div>
                     </div>
                   </div>
                 </div>
@@ -528,7 +541,7 @@ export default function NotesPage() {
                 Cancel
               </button>
               <button 
-                className="px-4 py-2 bg-blue-600 text-white rounded-md font-semibold hover:bg-blue-700 transition-all duration-300"
+                className="px-4 py-2 bg-gradient-to-r from-amber-400 to-yellow-300 text-indigo-900 rounded-md font-semibold hover:from-amber-500 hover:to-yellow-400 transition-all duration-300"
               >
                 Create Note
               </button>

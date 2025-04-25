@@ -9,7 +9,12 @@ export default function Navbar() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [isScrolled, setIsScrolled] = useState(false);
   const [searchQuery, setSearchQuery] = useState('');
+  const [mounted, setMounted] = useState(false);
   const router = useRouter();
+
+  useEffect(() => {
+    setMounted(true);
+  }, []);
 
   // Handle scroll effect
   useEffect(() => {
@@ -34,6 +39,20 @@ export default function Navbar() {
     }
   };
 
+  if (!mounted) {
+    return (
+      <nav className="fixed w-full top-0 z-50 bg-gradient-to-r from-indigo-900/90 to-purple-900/90 backdrop-blur-sm py-2">
+        <div className="container mx-auto px-4">
+          <div className="flex justify-between items-center">
+            <Link href="/" className="text-2xl font-bold bg-gradient-to-r from-amber-400 to-yellow-300 bg-clip-text text-transparent">
+              Lotlite Technology
+            </Link>
+          </div>
+        </div>
+      </nav>
+    );
+  }
+
   return (
     <nav className={`fixed w-full top-0 z-50 transition-all duration-300 ${
       isScrolled 
@@ -57,6 +76,7 @@ export default function Navbar() {
               <Link href="/tutorials" className={`${isScrolled ? 'text-gray-700 hover:text-indigo-600' : 'text-white hover:text-amber-300'} transition-all duration-300 font-medium`}>
                 Tutorials
               </Link>
+          
               <Link href="/blog" className={`${isScrolled ? 'text-gray-700 hover:text-indigo-600' : 'text-white hover:text-amber-300'} transition-all duration-300 font-medium`}>
                 Blog
               </Link>
@@ -66,6 +86,8 @@ export default function Navbar() {
               <Link href="/contact" className={`${isScrolled ? 'text-gray-700 hover:text-indigo-600' : 'text-white hover:text-amber-300'} transition-all duration-300 font-medium`}>
                 Contact
               </Link>
+
+            
             </div>
           </div>
 
@@ -81,7 +103,7 @@ export default function Navbar() {
                   onChange={(e) => setSearchQuery(e.target.value)}
                   className="w-64 px-4 py-2 pl-10 pr-4 rounded-full border border-gray-300 bg-white text-gray-800 focus:outline-none focus:ring-2 focus:ring-amber-500 focus:border-transparent transition-all duration-300 shadow-sm"
                 />
-                <button type="submit" className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-500">
+                <button type="submit" className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-500" title="Search">
                   <FaSearch />
                 </button>
               </div>
@@ -124,7 +146,7 @@ export default function Navbar() {
                 onChange={(e) => setSearchQuery(e.target.value)}
                 className="w-full px-4 py-2 pl-10 pr-4 rounded-full border border-gray-300 bg-white text-gray-800 focus:outline-none focus:ring-2 focus:ring-amber-500 focus:border-transparent transition-all duration-300 shadow-sm"
               />
-              <button type="submit" className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-500">
+              <button type="submit" className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-500" title="Search">
                 <FaSearch />
               </button>
             </div>
@@ -143,6 +165,15 @@ export default function Navbar() {
               </Link>
               <Link href="/tutorials" className="text-gray-700 hover:text-indigo-600 transition-all duration-300 font-medium">
                 Tutorials
+              </Link>
+              <Link href="/web-development" className="text-gray-700 hover:text-indigo-600 transition-all duration-300 font-medium">
+                Web Development
+              </Link>
+              <Link href="/ai-ml" className="text-gray-700 hover:text-indigo-600 transition-all duration-300 font-medium">
+                AI & ML
+              </Link>
+              <Link href="/dsa" className="text-gray-700 hover:text-indigo-600 transition-all duration-300 font-medium">
+                DSA
               </Link>
               <Link href="/blog" className="text-gray-700 hover:text-indigo-600 transition-all duration-300 font-medium">
                 Blog

@@ -11,9 +11,26 @@ const inter = Inter({
   display: "swap",
 });
 
+export const viewport = {
+  width: 'device-width',
+  initialScale: 1,
+  maximumScale: 1,
+};
+
 export const metadata: Metadata = {
-  title: "Lotlite Technology - Learn Coding the Right Way",
-  description: "Learn coding with practical exercises and real-world projects.",
+  title: {
+    default: "Lotlite Technology",
+    template: "%s | Lotlite Technology"
+  },
+  description: "Learn coding with expert guidance",
+  icons: {
+    icon: [
+      {
+        url: './icon.tsx',
+        type: 'image/png',
+      },
+    ],
+  },
 };
 
 export default function RootLayout({

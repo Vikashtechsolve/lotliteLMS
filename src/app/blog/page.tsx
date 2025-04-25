@@ -51,7 +51,7 @@ const mockBlogPosts: BlogPost[] = [
     isBookmarked: false,
     readTime: "7 min read",
     createdAt: "2023-06-10",
-    imageUrl: "https://images.unsplash.com/photo-1627398242454-45a1465c2479?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1474&q=80"
+    imageUrl: "https://images.unsplash.com/photo-1580894894513-541e068a3e2b?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80"
   },
   {
     id: 3,
@@ -66,7 +66,7 @@ const mockBlogPosts: BlogPost[] = [
     isBookmarked: false,
     readTime: "10 min read",
     createdAt: "2023-06-05",
-    imageUrl: "https://images.unsplash.com/photo-1627398242454-45a1465c2479?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1474&q=80"
+    imageUrl: "https://media.istockphoto.com/id/1693085973/photo/matrix-byte-of-binary-data-rian-code-running-abstract-background-in-dark-blue-digital-style.webp?a=1&b=1&s=612x612&w=0&k=20&c=PW6I9IVuem32AQ899ySgiHzqJKenHPI-Ri8sDAqnAG0="
   },
   {
     id: 4,
@@ -156,7 +156,7 @@ const mockBlogPosts: BlogPost[] = [
     isBookmarked: false,
     readTime: "10 min read",
     createdAt: "2023-05-10",
-    imageUrl: "https://images.unsplash.com/photo-1544383835-bda2bc66a55d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80"
+    imageUrl: "https://media.istockphoto.com/id/942201110/photo/set-of-mysql-queries-in-a-database-management-software.webp?a=1&b=1&s=612x612&w=0&k=20&c=s1-KrDEsmSK2w5cuokBoDtEwnI7m-PulxsgpS6UxHpg="
   }
 ];
 
@@ -260,7 +260,7 @@ export default function BlogPage() {
         <div className="container mx-auto px-4 relative z-10">
           <div className="max-w-4xl mx-auto text-center">
             <h1 className="text-4xl font-bold text-center mb-12 bg-gradient-to-r from-amber-400 to-yellow-300 bg-clip-text text-transparent">
-            Lotlite Technology
+              Lotlite Technology Blog
             </h1>
             <p className="text-xl mb-8 text-amber-100">
               Explore the latest insights, tutorials, and best practices in software development.
@@ -312,15 +312,17 @@ export default function BlogPage() {
             </div>
             
             <div className="flex items-center space-x-2">
-              <span className="font-medium text-gray-700">Sort by:</span>
+              <span className="font-medium text-indigo-600">Sort by:</span>
               <select 
-                className="px-3 py-2 rounded-md border border-gray-300 focus:outline-none focus:ring-2 focus:ring-indigo-500"
+                title="Sort blog posts by"
+                className="px-3 py-2 rounded-md border border-gray-300 focus:outline-none focus:ring-2 focus:ring-indigo-500 text-indigo-600"
                 value={activeFilter}
                 onChange={(e) => setActiveFilter(e.target.value)}
               >
-                <option value="all">All Posts</option>
-                <option value="popular">Most Popular</option>
-                <option value="recent">Most Recent</option>
+                <option value="all" className="text-indigo-600">All Posts</option>
+                <option value="popular" className="text-indigo-600">Most Popular</option>
+                <option value="recent" className="text-indigo-600">Most Recent</option>
+                <option value="bookmarked" className="text-indigo-600">Bookmarked</option>
               </select>
             </div>
           </div>
@@ -341,7 +343,7 @@ export default function BlogPage() {
               {sortedPosts.map((post) => (
                 <article 
                   key={post.id} 
-                  className="bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1 opacity-0 animate-fade-in group"
+                  className="bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1 opacity-0 animate-fade-in group flex flex-col h-full"
                   style={{ animationDelay: `${post.id * 100}ms` }}
                 >
                   <div className="relative h-48 overflow-hidden">
@@ -356,19 +358,21 @@ export default function BlogPage() {
                     </div>
                   </div>
                   
-                  <div className="p-6">
-                    <div className="flex items-center text-sm text-gray-500 mb-3">
-                      <FaUser className="mr-1" />
-                      <span className="mr-4">{post.author}</span>
-                      <FaClock className="mr-1" />
-                      <span>{post.readTime}</span>
+                  <div className="p-6 flex flex-col flex-grow">
+                    <div className="flex items-center justify-between text-sm text-gray-500 mb-3">
+                      <div className="flex items-center">
+                        <FaUser className="mr-1" />
+                        <span className="mr-4">{post.author}</span>
+                        <FaClock className="mr-1" />
+                        <span>{post.readTime}</span>
+                      </div>
                     </div>
                     
                     <h3 className="text-xl font-bold text-gray-800 mb-2 hover:text-indigo-600 transition-colors">
                       {post.title}
                     </h3>
                     
-                    <p className="text-gray-600 mb-4 line-clamp-2">
+                    <p className="text-gray-600 mb-4 line-clamp-2 flex-grow">
                       {post.excerpt}
                     </p>
                     
@@ -384,7 +388,7 @@ export default function BlogPage() {
                       ))}
                     </div>
                     
-                    <div className="flex items-center justify-between pt-4 border-t border-gray-100">
+                    <div className="flex items-center justify-between pt-4 border-t border-gray-100 mt-auto">
                       <div className="flex items-center space-x-4">
                         <button
                           onClick={() => handleLikeToggle(post.id)}
@@ -402,8 +406,12 @@ export default function BlogPage() {
                         </button>
                       </div>
                       
-                      <Link href={`/blog/${post.id}`} className="text-indigo-600 font-medium hover:text-indigo-800 transition-colors flex items-center group">
-                        Read More <FaArrowRight className="ml-1 transform group-hover:translate-x-1 transition-transform" />
+                      <Link 
+                        href={`/blog/${post.id}`} 
+                        className="text-indigo-600 font-medium hover:text-indigo-800 transition-colors flex items-center group min-w-[100px] justify-end whitespace-nowrap"
+                      >
+                        <span>Read More</span>
+                        <FaArrowRight className="ml-1 transform group-hover:translate-x-1 transition-transform" />
                       </Link>
                     </div>
                   </div>

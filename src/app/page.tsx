@@ -1,9 +1,8 @@
-"use client";
-
 import Link from 'next/link';
 import { FaAmazon, FaGoogle, FaMicrosoft, FaPaypal, FaGithub, FaYoutube, FaTwitter, FaLinkedin, FaArrowRight, FaCheckCircle, FaLaptopCode, FaCode, FaDatabase, FaBrain, FaRocket, FaUsers, FaBook, FaCertificate } from 'react-icons/fa';
 import { SiGoldmansachs, SiHitachi, SiJavascript, SiPython, SiReact, SiNodedotjs, SiMongodb, SiDocker } from 'react-icons/si';
 import Testimonials from '../components/Testimonials';
+import VideoCard from '../components/VideoCard';
 
 export default function Home() {
   return (
@@ -16,15 +15,16 @@ export default function Home() {
         
         <div className="container mx-auto px-4 relative z-10">
           <div className="max-w-4xl mx-auto text-center">
-            <h1 className="text-4xl md:text-5xl font-bold text-center mb-6 bg-gradient-to-r from-amber-400 to-yellow-300 bg-clip-text text-transparent">
+            <h1 className="text-5xl md:text-6xl font-bold mb-6 animate-fade-in bg-gradient-to-r from-amber-400 to-yellow-300 bg-clip-text text-transparent">
               Welcome to Lotlite Technology
+              
             </h1>
-            <p className="text-xl text-amber-100 text-center max-w-3xl mx-auto mb-12">
+            <p className="text-xl mb-8 text-amber-100">
               At Lotlite Technology, you don&apos;t just learn code — you engage in practical exercises that reflect real-world scenarios.
             </p>
             <div className="flex gap-6 justify-center">
               <Link href="/courses" 
-                className="border-2 border-amber-400 text-amber-400 px-8 py-4 rounded-full font-semibold hover:bg-amber-400 hover:text-indigo-900 transition-all duration-300 hover:scale-105 text-lg">
+                className="bg-gradient-to-r from-amber-400 to-yellow-300 text-indigo-900 px-8 py-4 rounded-full font-semibold hover:from-amber-500 hover:to-yellow-400 transition-all duration-300 hover:scale-105 shadow-lg text-lg">
                 Explore Courses
               </Link>
               <Link href="/blog"
@@ -67,73 +67,24 @@ export default function Home() {
             </p>
           </div>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            <div className="p-6 bg-white rounded-2xl shadow-xl hover:shadow-2xl transition-all duration-300 hover:scale-105 border border-amber-100 group">
-              <div className="w-full h-64 rounded-t-2xl flex items-center justify-center overflow-hidden">
-                <video 
-                  src="/Images/web dev.mp4" 
-                  className="w-full h-full object-contain"
-                  autoPlay
-                  loop
-                  muted
-                  playsInline
-                  ref={(video) => {
-                    if (video) {
-                      video.playbackRate = 1.0;
-                    }
-                  }}
-                />
-              </div>
-              <div className="p-6">
-                <h3 className="text-2xl font-bold mb-4 text-indigo-900">Web Development</h3>
-                <p className="text-gray-600 mb-6 leading-relaxed">Learn HTML, CSS, JavaScript and modern frameworks to build responsive websites and web applications.</p>
-                <Link href="/web-development" className="text-purple-600 hover:text-purple-700 font-semibold transition flex items-center justify-center group">
-                  Learn More 
-                  <FaArrowRight className="ml-2 transform group-hover:translate-x-1 transition-transform" />
-                </Link>
-              </div>
-            </div>
-            <div className="p-6 bg-white rounded-2xl shadow-xl hover:shadow-2xl transition-all duration-300 hover:scale-105 border border-yellow-100 group">
-              <div className="w-full h-64 rounded-t-2xl flex items-center justify-center overflow-hidden">
-                <video 
-                  src="/Images/AI&ML.mp4" 
-                  className="w-full h-full object-contain"
-                  autoPlay
-                  loop
-                  muted
-                  playsInline
-                  ref={(video) => {
-                    if (video) {
-                      video.playbackRate = 1.0;
-                    }
-                  }}
-                />
-              </div>
-              <div className="p-6">
-                <h3 className="text-2xl font-bold mb-4 text-indigo-900">AI & ML</h3>
-                <p className="text-gray-600 mb-6 leading-relaxed">Master Python, data analysis, machine learning and artificial intelligence with hands-on projects.</p>
-                <Link href="/data-science" className="text-purple-600 hover:text-purple-700 font-semibold transition flex items-center justify-center group">
-                  Learn More 
-                  <FaArrowRight className="ml-2 transform group-hover:translate-x-1 transition-transform" />
-                </Link>
-              </div>
-            </div>
-            <div className="p-6 bg-white rounded-2xl shadow-xl hover:shadow-2xl transition-all duration-300 hover:scale-105 border border-amber-100 group">
-              <div className="w-full h-64 rounded-t-2xl flex items-center justify-center overflow-hidden bg-gray-100">
-                <img 
-                  src="/Images/ds.jpg" 
-                  alt="Data Structures and Algorithms" 
-                  className="w-full h-full object-cover"
-                />
-              </div>
-              <div className="p-6">
-                <h3 className="text-2xl font-bold mb-4 text-indigo-900">Data Structures & Algorithms</h3>
-                <p className="text-gray-600 mb-6 leading-relaxed">Learn DSA and crack interviews at top companies like Google and Microsoft.</p>
-                <Link href="/dsa" className="text-purple-600 hover:text-purple-700 font-semibold transition flex items-center justify-center group">
-                  Learn More 
-                  <FaArrowRight className="ml-2 transform group-hover:translate-x-1 transition-transform" />
-                </Link>
-              </div>
-            </div>
+            <VideoCard
+              videoSrc="/Images/web dev.mp4"
+              title="Web Development"
+              description="Learn HTML, CSS, JavaScript and modern frameworks to build responsive websites and web applications."
+              link="/web-development"
+            />
+            <VideoCard
+              videoSrc="/Images/AI&ML.mp4"
+              title="Programming Language"
+              description="Master Python, Java, C++, C, JavaScript, and more with hands-on projects."
+              link="/ai-ml"
+            />
+            <VideoCard
+              imageSrc="/Images/ds.jpg"
+              title="Data Structures & Algorithms"
+              description="Learn DSA and crack interviews at top companies like Google and Microsoft."
+              link="/dsa"
+            />
           </div>
         </div>
       </section>
@@ -143,7 +94,7 @@ export default function Home() {
         <div className="container mx-auto px-4 relative z-10">
           <div className="max-w-4xl mx-auto text-center mb-16">
             <h2 className="text-3xl font-bold text-center mb-12 bg-gradient-to-r from-amber-400 to-yellow-300 bg-clip-text text-transparent">Why Choose Lotlite Technology?</h2>
-            <p className="text-xl text-amber-100 text-center max-w-3xl mx-auto mb-12">
+            <p className=" text-amber-100 text-xl mb-8">
               Join thousands of students who have already transformed their careers with Lotlite Technology.
             </p>
           </div>
@@ -254,7 +205,7 @@ export default function Home() {
             </p>
             <div className="flex flex-col sm:flex-row gap-6 justify-center">
               <Link href="/courses" 
-                className="bg-blue-600 text-white px-8 py-4 rounded-full font-semibold hover:bg-blue-700 transition-all duration-300 hover:scale-105 shadow-lg text-lg">
+                className="bg-gradient-to-r from-amber-400 to-yellow-300 text-indigo-900 px-8 py-4 rounded-full font-semibold hover:from-amber-500 hover:to-yellow-400 transition-all duration-300 hover:scale-105 shadow-lg text-lg">
                 Browse All Courses
               </Link>
               <Link href="/contact"
