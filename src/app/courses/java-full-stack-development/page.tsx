@@ -17,37 +17,39 @@ export default function JavaFullStackDevelopment() {
         <div className="absolute bottom-0 right-0 w-96 h-96 bg-yellow-300 rounded-full filter blur-3xl opacity-20 translate-x-1/2 translate-y-1/2 animate-pulse"></div>
         
         <div className="container mx-auto px-4 relative z-10">
-          <div className="max-w-3xl">
-            <h1 className="text-4xl md:text-5xl font-bold mb-6 bg-gradient-to-r from-amber-400 to-yellow-300 bg-clip-text text-transparent">
-              Java Full Stack Development
-            </h1>
-            <p className="text-xl mb-8 text-amber-100">
-              Master enterprise-grade application development with Java, Spring Boot, and modern frontend technologies.
-            </p>
-            <div className="flex flex-wrap gap-4 mb-8">
-              <div className="flex items-center text-amber-200">
-                <FaClock className="mr-2" />
-                <span>08 Weeks</span>
+          <div className="flex flex-col md:flex-row gap-8 items-center">
+            <div className="max-w-3xl">
+              <h1 className="text-4xl md:text-5xl font-bold mb-6 bg-gradient-to-r from-amber-400 to-yellow-300 bg-clip-text text-transparent">
+                Java Full Stack Development
+              </h1>
+              <p className="text-xl mb-8 text-amber-100">
+                Master enterprise-grade application development with Java, Spring Boot, and modern frontend technologies.
+              </p>
+              <div className="flex flex-wrap gap-4 mb-8">
+                <div className="flex items-center text-amber-200">
+                  <FaClock className="mr-2" />
+                  <span>08 Weeks</span>
+                </div>
+                <div className="flex items-center text-amber-200">
+                  <FaUsers className="mr-2" />
+                  <span>Beginner to Advanced</span>
+                </div>
+                <div className="flex items-center text-amber-200">
+                  <FaStar className="mr-2" />
+                  <span>4.7/5 Rating</span>
+                </div>
               </div>
-              <div className="flex items-center text-amber-200">
-                <FaUsers className="mr-2" />
-                <span>Beginner to Advanced</span>
-              </div>
-              <div className="flex items-center text-amber-200">
-                <FaStar className="mr-2" />
-                <span>4.7/5 Rating</span>
-              </div>
+              <Link
+                href="/contact"
+                className="inline-block bg-gradient-to-r from-amber-400 to-yellow-300 text-indigo-900 px-8 py-3 rounded-full font-semibold hover:from-amber-500 hover:to-yellow-400 transition-colors"
+              >
+                Enroll Now
+              </Link>
             </div>
-            <Link
-              href="/contact"
-              className="inline-block bg-gradient-to-r from-amber-400 to-yellow-300 text-indigo-900 px-8 py-3 rounded-full font-semibold hover:from-amber-500 hover:to-yellow-400 transition-colors"
-            >
-              Enroll Now
-            </Link>
-            <div className="w-full md:w-80 bg-white/10 backdrop-blur-sm p-2 rounded-xl mt-6">
+            <div className="w-full bg-white/10 backdrop-blur-sm p-2 rounded-xl">
               <div className="relative pb-[56.25%] h-0 rounded-xl overflow-hidden shadow-2xl">
                 <iframe
-                  className="absolute top-0 left-0 w-full h-full rounded-2xl"
+                  className="absolute top-0 left-0 w-full h-full rounded-xl"
                   src="https://www.youtube.com/embed/TXhIPNX47PY"
                   title="Course Introduction"
                   allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
