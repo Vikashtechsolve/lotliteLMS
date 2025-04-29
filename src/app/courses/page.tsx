@@ -24,21 +24,6 @@ const courses = [
   },
   {
     id: 2,
-    title: "Python for Data Science & Machine Learning",
-    description: "Learn Python programming, data analysis, visualization, and machine learning algorithms.",
-    image: "/course-python.jpg",
-    instructor: "Vikash dubey",
-    rating: 4.9,
-    students: 700,
-    duration: "8 Weeks",
-    level: "Intermediate",
-    price: 179,
-    category: "Data Science",
-    tags: ["Python", "Pandas", "NumPy", "Matplotlib", "Scikit-learn", "TensorFlow"],
-    featured: true
-  },
-  {
-    id: 3,
     title: "Java with Data Structures & Algorithms",
     description: "Master Java programming and Data Structures & Algorithms. Build a strong foundation for software development and ace technical interviews.",
     image: "/course-java.jpg",
@@ -58,9 +43,7 @@ const courses = [
 const categories = [
   "All Courses",
   "Mern Stack Web Development",
-  "Data Science",
-  "Java Full Stack Development",
- 
+  "Java Full Stack Development"
 ];
 
 export default function CoursesPage() {
@@ -255,7 +238,7 @@ export default function CoursesPage() {
                         <span className="text-amber-500">₹</span>{course.price}
                       </div>
                       <Link 
-                        href={course.id === 1 ? '/courses/complete-web-development-bootcamp' : course.id === 2 ? '/courses/python-for-data-science-machine-learning' : course.id === 3 ? '/courses/java-full-stack-development' : `/courses/${course.title.toLowerCase().replace(/ /g, '-')}`}
+                        href={course.id === 1 ? '/courses/complete-web-development-bootcamp' : course.id === 2 ? '/courses/java-full-stack-development' : `/courses/${course.title.toLowerCase().replace(/ /g, '-')}`}
                         className="bg-amber-400 hover:bg-amber-500 text-indigo-900 px-6 py-2.5 rounded-full text-lg font-semibold transition-all duration-300"
                       >
                         View Course
@@ -298,14 +281,6 @@ export default function CoursesPage() {
               <p className="text-gray-600 text-sm">Master HTML, CSS, JavaScript, React, Node.js, and MongoDB</p>
             </div>
             
-            <div className="flex-1 max-w-sm bg-gradient-to-br from-amber-50 to-yellow-50 rounded-xl p-6 text-center hover:shadow-lg transition-all duration-300 transform hover:-translate-y-1 group">
-              <div className="w-16 h-16 bg-gradient-to-br from-amber-400 to-yellow-500 rounded-xl flex items-center justify-center mb-4 mx-auto transform group-hover:scale-110 transition-transform">
-                <FaDatabase className="w-8 h-8 text-white" />
-              </div>
-              <h3 className="text-lg font-bold text-indigo-900 mb-2">Python for Data Science & Machine Learning</h3>
-              <p className="text-gray-600 text-sm">Learn Python programming, data analysis, and machine learning</p>
-            </div>
-            
             <div className="flex-1 max-w-sm bg-gradient-to-br from-green-50 to-teal-50 rounded-xl p-6 text-center hover:shadow-lg transition-all duration-300 transform hover:-translate-y-1 group">
               <div className="w-16 h-16 bg-gradient-to-br from-green-400 to-teal-500 rounded-xl flex items-center justify-center mb-4 mx-auto transform group-hover:scale-110 transition-transform">
                 <FaLaptopCode className="w-8 h-8 text-white" />
@@ -326,11 +301,6 @@ export default function CoursesPage() {
             <div className="bg-white/5 backdrop-blur-sm rounded-xl p-6 flex flex-col items-center justify-center hover:bg-white/10 transition-all duration-300 group">
               <SiJavascript className="w-12 h-12 text-yellow-400 mb-3 transform group-hover:scale-110 transition-transform" />
               <h3 className="text-amber-300 font-medium">JavaScript</h3>
-            </div>
-            
-            <div className="bg-white/5 backdrop-blur-sm rounded-xl p-6 flex flex-col items-center justify-center hover:bg-white/10 transition-all duration-300 group">
-              <SiPython className="w-12 h-12 text-blue-400 mb-3 transform group-hover:scale-110 transition-transform" />
-              <h3 className="text-amber-300 font-medium">Python</h3>
             </div>
             
             <div className="bg-white/5 backdrop-blur-sm rounded-xl p-6 flex flex-col items-center justify-center hover:bg-white/10 transition-all duration-300 group">

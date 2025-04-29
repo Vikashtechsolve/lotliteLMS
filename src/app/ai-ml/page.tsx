@@ -29,12 +29,12 @@ export default function AIMLPage() {
 
         {/* Core Technologies */}
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-12">
-          <div className="bg-white rounded-xl shadow-xl p-8 transform hover:scale-[1.02] transition-transform duration-300">
+          <div className="bg-white rounded-xl shadow-xl p-8 transform hover:scale-[1.02] transition-transform duration-300 flex flex-col h-full">
             <h3 className="text-2xl font-bold text-gray-800 mb-6 flex items-center">
               <FaCode className="mr-3 text-blue-500" />
               MERN Stack
             </h3>
-            <ul className="space-y-4 text-gray-600 mb-6">
+            <ul className="space-y-4 text-gray-600 mb-6 flex-grow">
               <li className="flex items-start">
                 <FaCheckCircle className="text-green-500 mt-1 mr-3 flex-shrink-0" />
                 <span><strong>MongoDB</strong> - NoSQL database for flexible data storage</span>
@@ -56,47 +56,51 @@ export default function AIMLPage() {
                 <span><strong>RESTful APIs</strong> - Building scalable web services</span>
               </li>
             </ul>
-            <Link 
-              href="/courses/complete-web-development-bootcamp"
-              className="inline-block bg-gradient-to-r from-blue-600 to-purple-600 text-white px-6 py-3 rounded-lg font-semibold hover:from-blue-700 hover:to-purple-700 transition-all duration-300"
-            >
-              Learn More
-            </Link>
+            <div className="mt-auto">
+              <Link 
+                href="/courses/complete-web-development-bootcamp"
+                className="inline-block bg-gradient-to-r from-blue-600 to-purple-600 text-white px-6 py-3 rounded-lg font-semibold hover:from-blue-700 hover:to-purple-700 transition-all duration-300 w-full text-center"
+              >
+                Learn More
+              </Link>
+            </div>
           </div>
 
-          <div className="bg-white rounded-xl shadow-xl p-8 transform hover:scale-[1.02] transition-transform duration-300">
+          <div className="bg-white rounded-xl shadow-xl p-8 transform hover:scale-[1.02] transition-transform duration-300 flex flex-col h-full">
             <h3 className="text-2xl font-bold text-gray-800 mb-6 flex items-center">
               <FaServer className="mr-3 text-blue-500" />
-              Java Full Stack
+              Java with Data Structures & Algorithms
             </h3>
-            <ul className="space-y-4 text-gray-600 mb-6">
+            <ul className="space-y-4 text-gray-600 mb-6 flex-grow">
               <li className="flex items-start">
                 <FaCheckCircle className="text-green-500 mt-1 mr-3 flex-shrink-0" />
-                <span><strong>Spring Boot</strong> - Enterprise Java framework</span>
+                <span><strong>Core Java</strong> - Object-oriented programming, collections, and multithreading</span>
               </li>
               <li className="flex items-start">
                 <FaCheckCircle className="text-green-500 mt-1 mr-3 flex-shrink-0" />
-                <span><strong>Spring MVC</strong> - Web application framework</span>
+                <span><strong>Data Structures</strong> - Arrays, Linked Lists, Stacks, Queues, Trees, Graphs</span>
               </li>
               <li className="flex items-start">
                 <FaCheckCircle className="text-green-500 mt-1 mr-3 flex-shrink-0" />
-                <span><strong>Hibernate</strong> - Object-relational mapping</span>
+                <span><strong>Algorithms</strong> - Sorting, Searching, Dynamic Programming, Greedy Algorithms</span>
               </li>
               <li className="flex items-start">
                 <FaCheckCircle className="text-green-500 mt-1 mr-3 flex-shrink-0" />
-                <span><strong>Microservices</strong> - Distributed architecture</span>
+                <span><strong>Problem Solving</strong> - Competitive programming and interview preparation</span>
               </li>
               <li className="flex items-start">
                 <FaCheckCircle className="text-green-500 mt-1 mr-3 flex-shrink-0" />
-                <span><strong>Frontend Integration</strong> - Angular/React with Java backend</span>
+                <span><strong>System Design</strong> - Design patterns and system architecture</span>
               </li>
             </ul>
-            <Link 
-              href="/courses/java-full-stack-development"
-              className="inline-block bg-gradient-to-r from-blue-600 to-purple-600 text-white px-6 py-3 rounded-lg font-semibold hover:from-blue-700 hover:to-purple-700 transition-all duration-300"
-            >
-              Learn More
-            </Link>
+            <div className="mt-auto">
+              <Link 
+                href="/courses/java-full-stack-development"
+                className="inline-block bg-gradient-to-r from-blue-600 to-purple-600 text-white px-6 py-3 rounded-lg font-semibold hover:from-blue-700 hover:to-purple-700 transition-all duration-300 w-full text-center"
+              >
+                Learn More
+              </Link>
+            </div>
           </div>
         </div>
 
@@ -156,8 +160,8 @@ export default function AIMLPage() {
               <p className="text-gray-600">Build modern web applications using JavaScript ecosystem</p>
             </div>
             <div className="p-6 bg-gradient-to-br from-green-50 to-blue-50 rounded-lg">
-              <h4 className="font-bold text-xl text-gray-800 mb-3">Java Full Stack Developer</h4>
-              <p className="text-gray-600">Develop enterprise-grade applications with Java technologies</p>
+              <h4 className="font-bold text-xl text-gray-800 mb-3">Java Developer</h4>
+              <p className="text-gray-600">Build robust applications with strong DSA knowledge</p>
             </div>
             <div className="p-6 bg-gradient-to-br from-green-50 to-blue-50 rounded-lg">
               <h4 className="font-bold text-xl text-gray-800 mb-3">Software Engineer</h4>
@@ -166,6 +170,10 @@ export default function AIMLPage() {
             <div className="p-6 bg-gradient-to-br from-green-50 to-blue-50 rounded-lg">
               <h4 className="font-bold text-xl text-gray-800 mb-3">Technical Lead</h4>
               <p className="text-gray-600">Lead development teams and architect solutions</p>
+            </div>
+            <div className="p-6 bg-gradient-to-br from-green-50 to-blue-50 rounded-lg">
+              <h4 className="font-bold text-xl text-gray-800 mb-3">Competitive Programmer</h4>
+              <p className="text-gray-600">Excel in coding competitions and technical interviews</p>
             </div>
           </div>
         </div>
