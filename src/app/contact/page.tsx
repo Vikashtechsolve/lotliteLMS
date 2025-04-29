@@ -114,7 +114,7 @@ export default function ContactPage() {
                 </div>
                 <div>
                   <h3 className="font-semibold text-purple-800">Email</h3>
-                  <p className="text-purple-700">support@vikashtechsolutions.com</p>
+                  <p className="text-purple-700">s.kumar@lotlitetechnology.com</p>
                 </div>
               </div>
 
@@ -124,7 +124,7 @@ export default function ContactPage() {
                 </div>
                 <div>
                   <h3 className="font-semibold text-purple-800">Phone</h3>
-                  <p className="text-purple-700">+1 (555) 123-4567</p>
+                  <p className="text-purple-700">+91 8805843309 +91 9766499364</p>
                 </div>
               </div>
 
@@ -134,7 +134,7 @@ export default function ContactPage() {
                 </div>
                 <div>
                   <h3 className="font-semibold text-purple-800">Address</h3>
-                  <p className="text-purple-700">123 Coding Street, Tech City, TC 12345</p>
+                  <p className="text-purple-700">Lotlite Technology Pvt Ltd. Office - 122, Gera Imperium, Opp- Wipro, Hinjewadi Phase 2, Rajiv Gandhi Infotech Park, Pune, Maharashtra 411057</p>
                 </div>
               </div>
 
@@ -144,7 +144,7 @@ export default function ContactPage() {
                 </div>
                 <div>
                   <h3 className="font-semibold text-purple-800">Working Hours</h3>
-                  <p className="text-purple-700">Monday - Friday: 9:00 AM - 6:00 PM</p>
+                  <p className="text-purple-700">Monday - Friday: 9:00 AM - 7:00 PM</p>
                 </div>
               </div>
             </div>

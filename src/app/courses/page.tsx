@@ -39,17 +39,17 @@ const courses = [
   },
   {
     id: 3,
-    title: "Java Full Stack Development",
-    description: "Learn Java, Spring Boot, Hibernate, and build complete web applications.",
+    title: "Java with Data Structures & Algorithms",
+    description: "Master Java programming and Data Structures & Algorithms. Build a strong foundation for software development and ace technical interviews.",
     image: "/course-java.jpg",
     instructor: "Vikash dubey",
     rating: 4.7,
     students: 500,
-    duration: "8 Weeks",
-    level: "Advanced",
+    duration: "12 Weeks",
+    level: "Beginner to Advanced",
     price: 129,
-    category: "Web Development",
-    tags: ["Java", "Spring Boot", "Hibernate", "Maven", "MySQL"],
+    category: "Java Development",
+    tags: ["Java", "Data Structures", "Algorithms", "OOP", "Problem Solving"],
     featured: false
   }
 ];
@@ -142,6 +142,7 @@ export default function CoursesPage() {
                   value={searchTerm}
                   onChange={(e) => setSearchTerm(e.target.value)}
                   className="w-full px-6 py-4 pl-12 pr-4 rounded-full border-2 border-indigo-300 bg-white text-gray-800 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:border-indigo-500 transition-all duration-300 shadow-lg"
+                  suppressHydrationWarning
                 />
                 <FaSearch className="absolute left-4 top-1/2 transform -translate-y-1/2 text-indigo-500 text-xl" />
               </div>
@@ -169,6 +170,7 @@ export default function CoursesPage() {
                       ? "bg-indigo-600 text-white"
                       : "bg-gray-100 text-gray-700 hover:bg-gray-200"
                   }`}
+                  suppressHydrationWarning
                 >
                   {category}
                 </button>
@@ -182,6 +184,7 @@ export default function CoursesPage() {
                 className="px-3 py-2 rounded-md border border-gray-300 focus:outline-none focus:ring-2 focus:ring-indigo-500 text-indigo-600"
                 value={activeFilter}
                 onChange={(e) => setActiveFilter(e.target.value)}
+                suppressHydrationWarning
               >
                 <option value="all" className="text-indigo-600">All Courses</option>
                 <option value="newest" className="text-indigo-600">Newest</option>
