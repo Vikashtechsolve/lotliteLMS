@@ -17,7 +17,6 @@ export default function Home() {
           <div className="max-w-4xl mx-auto text-center">
             <h1 className="text-5xl md:text-6xl font-bold mb-6 animate-fade-in bg-gradient-to-r from-amber-400 to-yellow-300 bg-clip-text text-transparent">
               Welcome to Lotlite Technology
-              
             </h1>
             <p className="text-xl mb-8 text-amber-100">
               At Lotlite Technology, you don&apos;t just learn code — you engage in practical exercises that reflect real-world scenarios.
@@ -26,10 +25,6 @@ export default function Home() {
               <Link href="/courses" 
                 className="bg-gradient-to-r from-amber-400 to-yellow-300 text-indigo-900 px-8 py-4 rounded-full font-semibold hover:from-amber-500 hover:to-yellow-400 transition-all duration-300 hover:scale-105 shadow-lg text-lg">
                 Explore Courses
-              </Link>
-              <Link href="/blog"
-                className="border-2 border-amber-400 text-amber-400 px-8 py-4 rounded-full font-semibold hover:bg-amber-400 hover:text-indigo-900 transition-all duration-300 hover:scale-105 text-lg">
-                Read Articles
               </Link>
             </div>
           </div>
@@ -72,18 +67,21 @@ export default function Home() {
               title="Web Development"
               description="Learn HTML, CSS, JavaScript and modern frameworks to build responsive websites and web applications."
               link="/web-development"
+              courseId="web-development"
             />
             <VideoCard
               videoSrc="/Images/AI&ML.mp4"
               title="Programming Language"
               description="Master Python, Java, C++, C, JavaScript, and more with hands-on projects."
               link="/ai-ml"
+              courseId="programming-languages"
             />
             <VideoCard
               imageSrc="/Images/ds.jpg"
               title="Data Structures & Algorithms"
               description="Learn DSA and crack interviews at top companies like Google and Microsoft."
               link="/dsa"
+              courseId="data-structures-algorithms"
             />
           </div>
         </div>

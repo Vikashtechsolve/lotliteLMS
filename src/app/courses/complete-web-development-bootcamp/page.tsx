@@ -40,7 +40,7 @@ export default function CompleteWebDevelopmentBootcamp() {
                 </div>
               </div>
               <Link
-                href="/contact"
+                href="/payment/1"
                 className="inline-block bg-gradient-to-r from-amber-400 to-yellow-300 text-indigo-900 px-8 py-3 rounded-full font-semibold hover:from-amber-500 hover:to-yellow-400 transition-colors"
               >
                 Enroll Now
@@ -287,7 +287,7 @@ export default function CompleteWebDevelopmentBootcamp() {
             Join thousands of students who have transformed their careers with our Complete Web Development Bootcamp.
           </p>
           <Link
-            href="/contact"
+            href="/payment/1"
             className="inline-block bg-gradient-to-r from-amber-400 to-yellow-300 text-indigo-900 px-8 py-3 rounded-full font-semibold hover:from-amber-500 hover:to-yellow-400 transition-colors"
           >
             Enroll Now

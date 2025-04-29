@@ -165,7 +165,7 @@ export default function WebDevelopmentPage() {
             Join our comprehensive web development program and learn from industry experts. Get hands-on experience with real-world projects and build a portfolio that stands out.
           </p>
           <Link 
-            href="/contact" 
+            href="/payment/web-development" 
             className="inline-block px-8 py-4 bg-white text-blue-600 font-bold rounded-lg text-lg hover:bg-gray-100 transition-colors duration-300 shadow-lg"
           >
             Enroll Now

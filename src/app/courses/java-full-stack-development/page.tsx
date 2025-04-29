@@ -40,7 +40,7 @@ export default function JavaFullStackDevelopment() {
                 </div>
               </div>
               <Link
-                href="/contact"
+                href="/payment/3"
                 className="inline-block bg-gradient-to-r from-amber-400 to-yellow-300 text-indigo-900 px-8 py-3 rounded-full font-semibold hover:from-amber-500 hover:to-yellow-400 transition-colors"
               >
                 Enroll Now
@@ -285,7 +285,7 @@ export default function JavaFullStackDevelopment() {
             Join our Java Full Stack Development course and become a proficient enterprise application developer.
           </p>
           <Link
-            href="/contact"
+            href="/payment/3"
             className="inline-block bg-gradient-to-r from-amber-400 to-yellow-300 text-indigo-900 px-8 py-3 rounded-full font-semibold hover:from-amber-500 hover:to-yellow-400 transition-colors"
           >
             Enroll Now

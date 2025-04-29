@@ -45,7 +45,7 @@ export default function JavaTutorialPage() {
                   </div>
                 </div>
                 <Link 
-                  href="/enroll"
+                  href="/payment/java"
                   className="inline-block bg-amber-400 text-indigo-900 text-xl font-semibold px-8 py-4 rounded-full hover:bg-amber-300 transition-all duration-300"
                 >
                   Enroll Now
@@ -147,7 +147,7 @@ export default function JavaTutorialPage() {
                   <span className="font-semibold text-indigo-900">Yes</span>
                 </div>
                 <Link 
-                  href="/login"
+                  href="/payment/java"
                   className="block w-full bg-gradient-to-r from-indigo-600 to-purple-600 text-white text-center py-4 rounded-lg font-semibold hover:from-indigo-700 hover:to-purple-700 transition-all duration-300 shadow-lg hover:shadow-xl hover:scale-[1.05] active:scale-[0.95]"
                 >
                   Enroll Now

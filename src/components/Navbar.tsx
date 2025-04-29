@@ -76,18 +76,15 @@ export default function Navbar() {
               <Link href="/tutorials" className={`${isScrolled ? 'text-gray-700 hover:text-indigo-600' : 'text-white hover:text-amber-300'} transition-all duration-300 font-medium`}>
                 Tutorials
               </Link>
-          
-              <Link href="/blog" className={`${isScrolled ? 'text-gray-700 hover:text-indigo-600' : 'text-white hover:text-amber-300'} transition-all duration-300 font-medium`}>
-                Blog
+              <Link href="/tests" className={`${isScrolled ? 'text-gray-700 hover:text-indigo-600' : 'text-white hover:text-amber-300'} transition-all duration-300 font-medium`}>
+                Tests
               </Link>
-              <Link href="/notes" className={`${isScrolled ? 'text-gray-700 hover:text-indigo-600' : 'text-white hover:text-amber-300'} transition-all duration-300 font-medium`}>
-                Notes
+              <Link href="/certifications" className={`${isScrolled ? 'text-gray-700 hover:text-indigo-600' : 'text-white hover:text-amber-300'} transition-all duration-300 font-medium`}>
+                Certifications
               </Link>
               <Link href="/contact" className={`${isScrolled ? 'text-gray-700 hover:text-indigo-600' : 'text-white hover:text-amber-300'} transition-all duration-300 font-medium`}>
                 Contact
               </Link>
-
-            
             </div>
           </div>
 
@@ -166,6 +163,12 @@ export default function Navbar() {
               <Link href="/tutorials" className="text-gray-700 hover:text-indigo-600 transition-all duration-300 font-medium">
                 Tutorials
               </Link>
+              <Link href="/tests" className="text-gray-700 hover:text-indigo-600 transition-all duration-300 font-medium">
+                Tests
+              </Link>
+              <Link href="/certifications" className="text-gray-700 hover:text-indigo-600 transition-all duration-300 font-medium">
+                Certifications
+              </Link>
               <Link href="/web-development" className="text-gray-700 hover:text-indigo-600 transition-all duration-300 font-medium">
                 Web Development
               </Link>
@@ -174,12 +177,6 @@ export default function Navbar() {
               </Link>
               <Link href="/dsa" className="text-gray-700 hover:text-indigo-600 transition-all duration-300 font-medium">
                 DSA
-              </Link>
-              <Link href="/blog" className="text-gray-700 hover:text-indigo-600 transition-all duration-300 font-medium">
-                Blog
-              </Link>
-              <Link href="/notes" className="text-gray-700 hover:text-indigo-600 transition-all duration-300 font-medium">
-                Notes
               </Link>
               <Link href="/contact" className="text-gray-700 hover:text-indigo-600 transition-all duration-300 font-medium">
                 Contact

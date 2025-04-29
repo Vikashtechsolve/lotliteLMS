@@ -40,7 +40,7 @@ export default function PythonDataScienceCourse() {
                 </div>
               </div>
               <Link
-                href="/contact"
+                href="/payment/2"
                 className="inline-block bg-gradient-to-r from-amber-400 to-yellow-300 text-indigo-900 px-8 py-3 rounded-full font-semibold hover:from-amber-500 hover:to-yellow-400 transition-colors"
               >
                 Enroll Now
@@ -288,7 +288,7 @@ export default function PythonDataScienceCourse() {
             Join thousands of students who have transformed their careers with our Python for Data Science & Machine Learning course.
           </p>
           <Link
-            href="/contact"
+            href="/payment/2"
             className="inline-block bg-gradient-to-r from-amber-400 to-yellow-300 text-indigo-900 px-8 py-3 rounded-full font-semibold hover:from-amber-500 hover:to-yellow-400 transition-colors"
           >
             Enroll Now
