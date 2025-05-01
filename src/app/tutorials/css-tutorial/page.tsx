@@ -55,21 +55,6 @@ export default function CSSTutorialPage() {
   const [isAdvancedOpen, setIsAdvancedOpen] = useState(false);
 
   return (
-<<<<<<< HEAD
-    <div className="min-h-screen bg-gray-50">
-      {/* Header Section */}
-      <div className="bg-white shadow-sm">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-6">
-          <div className="flex items-center justify-between">
-            <div className="flex items-center space-x-4">
-              <FaCss3 className="text-4xl text-blue-500" />
-              <h1 className="text-2xl font-bold text-gray-900">CSS Tutorial</h1>
-            </div>
-            <div className="flex items-center space-x-4">
-              <Link href="/tutorials" className="text-gray-600 hover:text-gray-900">
-                <FaArrowRight className="rotate-180" />
-              </Link>
-=======
     <div className="min-h-screen bg-white">
       {/* Hero Section */}
       <section className="bg-gradient-to-r from-indigo-900 via-purple-800 to-pink-700 text-white py-20 relative overflow-hidden">
@@ -204,11 +189,10 @@ export default function CSSTutorialPage() {
                   Enroll Now
                 </Link>
               </div>
->>>>>>> 5f2268c3b0956d842dcc6046d530c96d51d42f13
             </div>
           </div>
         </div>
-      </div>
+      </section>
 
       {/* Main Content */}
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">

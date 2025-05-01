@@ -14,7 +14,7 @@ const tutorials = [
     category: "Web Development",
     featured: true,
     createdAt: "2024-03-15",
-    link: "/tutorials/html-tutorial"
+    link: "/tutorials/html-tutorials"
   },
   {
     id: 2,

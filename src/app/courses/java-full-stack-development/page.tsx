@@ -1,5 +1,6 @@
 "use client";
 
+import React from 'react';
 import Link from 'next/link';
 import { FaCheck, FaClock, FaCode, FaGraduationCap, FaLaptopCode, FaMobileAlt, FaProjectDiagram, FaStar, FaUsers } from 'react-icons/fa';
 
@@ -289,21 +290,6 @@ export default function JavaFullStackDevelopment() {
         </div>
       </div>
 
-<<<<<<< HEAD
-      {/* CTA Section */}
-      <div className="bg-gradient-to-r from-indigo-900 via-purple-800 to-pink-700 text-white py-16">
-        <div className="container mx-auto px-4 text-center">
-          <h2 className="text-3xl font-bold mb-6">Ready to Start Your Java Development Journey?</h2>
-          <p className="text-xl mb-8 text-amber-100 max-w-2xl mx-auto">
-            Join our Java Full Stack Development course and become a proficient enterprise application developer.
-          </p>
-          <Link
-            href="/payment/3"
-            className="inline-block bg-gradient-to-r from-amber-400 to-yellow-300 text-indigo-900 px-8 py-3 rounded-full font-semibold hover:from-amber-500 hover:to-yellow-400 transition-colors"
-          >
-            Enroll Now
-          </Link>
-=======
       {/* Ready to Start */}
       <div className="bg-gradient-to-r from-indigo-900 via-purple-800 to-pink-700 text-white py-20 relative overflow-hidden">
         <div className="absolute top-0 left-0 w-96 h-96 bg-amber-400 rounded-full filter blur-3xl opacity-20 -translate-x-1/2 -translate-y-1/2 animate-pulse"></div>
@@ -322,7 +308,6 @@ export default function JavaFullStackDevelopment() {
               Enroll Now
             </Link>
           </div>
->>>>>>> 4436e93c2e69fcfb7ae0ce24f6c3b28c50befa1f
         </div>
       </div>
     </div>
