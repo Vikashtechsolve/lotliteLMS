@@ -211,11 +211,11 @@ export default function DSAPage() {
         <div className="bg-gradient-to-r from-purple-600 to-pink-600 rounded-xl shadow-xl p-12 text-center">
           <h2 className="text-3xl font-bold text-white mb-4">Ready to Master DSA?</h2>
           <p className="text-white text-lg mb-8 max-w-2xl mx-auto">
-            Join our comprehensive Data Structures & Algorithms program and learn from industry experts. Get hands-on practice with real interview questions and build the skills needed to succeed in technical interviews.
+            Join our comprehensive DSA program and learn from industry experts. Get hands-on experience with real-world projects and build a portfolio that stands out.
           </p>
           <Link 
-            href="/contact" 
-            className="inline-block px-8 py-4 bg-white text-purple-600 font-bold rounded-lg text-lg hover:bg-gray-100 transition-colors duration-300 shadow-lg"
+            href="/payment/data-structures-algorithms" 
+            className="inline-block px-8 py-4 bg-white text-blue-600 font-bold rounded-lg text-lg hover:bg-gray-100 transition-colors duration-300 shadow-lg"
           >
             Enroll Now
           </Link>

@@ -55,6 +55,7 @@ export default function CSSTutorialPage() {
   const [isAdvancedOpen, setIsAdvancedOpen] = useState(false);
 
   return (
+<<<<<<< HEAD
     <div className="min-h-screen bg-gray-50">
       {/* Header Section */}
       <div className="bg-white shadow-sm">
@@ -68,6 +69,142 @@ export default function CSSTutorialPage() {
               <Link href="/tutorials" className="text-gray-600 hover:text-gray-900">
                 <FaArrowRight className="rotate-180" />
               </Link>
+=======
+    <div className="min-h-screen bg-white">
+      {/* Hero Section */}
+      <section className="bg-gradient-to-r from-indigo-900 via-purple-800 to-pink-700 text-white py-20 relative overflow-hidden">
+        {/* Decorative elements */}
+        <div className="absolute top-0 left-0 w-96 h-96 bg-amber-400 rounded-full filter blur-3xl opacity-20 -translate-x-1/2 -translate-y-1/2 animate-pulse"></div>
+        <div className="absolute bottom-0 right-0 w-96 h-96 bg-yellow-300 rounded-full filter blur-3xl opacity-20 translate-x-1/2 translate-y-1/2 animate-pulse"></div>
+        
+        <div className="container mx-auto px-4 relative z-10">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+            {/* Left Content */}
+            <div>
+              <div className="animate-fade-in">
+                <Link href="/tutorials" className="inline-flex items-center text-amber-300 hover:text-amber-200 mb-8">
+                  <FaArrowLeft className="mr-2" /> Back to Tutorials
+                </Link>
+              </div>
+              <div className="max-w-2xl">
+                <h1 className="text-5xl md:text-6xl font-bold mb-6 text-amber-300">
+                  CSS Tutorial
+                </h1>
+                <p className="text-xl md:text-2xl text-gray-100 mb-8 leading-relaxed">
+                  Master CSS from fundamentals to advanced concepts. Learn to create beautiful, responsive, and modern web designs.
+                </p>
+                <div className="flex flex-wrap gap-6 mb-8">
+                  <div className="flex items-center text-lg">
+                    <FaClock className="text-amber-300 mr-2" />
+                    <span>06 Weeks</span>
+                  </div>
+                  <div className="flex items-center text-lg">
+                    <FaUserGraduate className="text-amber-300 mr-2" />
+                    <span>Beginner to Advanced</span>
+                  </div>
+                  <div className="flex items-center text-lg">
+                    <FaStar className="text-amber-300 mr-2" />
+                    <span>4.8/5 Rating</span>
+                  </div>
+                </div>
+                <Link 
+                  href="/payment/css"
+                  className="inline-block bg-amber-400 text-indigo-900 text-xl font-semibold px-8 py-4 rounded-full hover:bg-amber-300 transition-all duration-300"
+                >
+                  Enroll Now
+                </Link>
+              </div>
+            </div>
+
+            {/* Right Content - Video */}
+            <YouTubeVideo videoId="yfoY53QXEnI" />
+          </div>
+        </div>
+      </section>
+
+      {/* Course Overview */}
+      <section className="py-16 bg-gradient-to-br from-purple-50 to-indigo-50">
+        <div className="container mx-auto px-4">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+            {/* Main Content */}
+            <div className="md:col-span-2">
+              <h2 className="text-3xl font-bold mb-6 text-indigo-900 animate-fade-in">What You'll Learn</h2>
+              <div className="space-y-4 mb-8">
+                <div className="flex items-start bg-white p-4 rounded-lg shadow-sm hover:shadow-md transition-all duration-300 hover:scale-[1.02] animate-fade-in-delay-1">
+                  <FaCode className="text-indigo-600 mt-1 mr-3 text-xl" />
+                  <div>
+                    <h3 className="font-semibold text-lg text-gray-800">CSS Fundamentals</h3>
+                    <p className="text-gray-700">Learn CSS basics including selectors, properties, values, and the box model.</p>
+                  </div>
+                </div>
+                <div className="flex items-start bg-white p-4 rounded-lg shadow-sm hover:shadow-md transition-all duration-300 hover:scale-[1.02] animate-fade-in-delay-2">
+                  <FaLaptopCode className="text-indigo-600 mt-1 mr-3 text-xl" />
+                  <div>
+                    <h3 className="font-semibold text-lg text-gray-800">Advanced CSS</h3>
+                    <p className="text-gray-700">Master Flexbox, Grid, animations, transitions, and responsive design.</p>
+                  </div>
+                </div>
+                <div className="flex items-start bg-white p-4 rounded-lg shadow-sm hover:shadow-md transition-all duration-300 hover:scale-[1.02] animate-fade-in-delay-3">
+                  <FaDatabase className="text-indigo-600 mt-1 mr-3 text-xl" />
+                  <div>
+                    <h3 className="font-semibold text-lg text-gray-800">CSS Preprocessors</h3>
+                    <p className="text-gray-700">Learn SASS/SCSS, LESS, and modern CSS methodologies.</p>
+                  </div>
+                </div>
+                <div className="flex items-start bg-white p-4 rounded-lg shadow-sm hover:shadow-md transition-all duration-300 hover:scale-[1.02] animate-fade-in-delay-4">
+                  <FaServer className="text-indigo-600 mt-1 mr-3 text-xl" />
+                  <div>
+                    <h3 className="font-semibold text-lg text-gray-800">CSS Frameworks</h3>
+                    <p className="text-gray-700">Learn Bootstrap, Tailwind CSS, and other popular CSS frameworks.</p>
+                  </div>
+                </div>
+              </div>
+
+              <h2 className="text-3xl font-bold mb-6 text-indigo-900 animate-fade-in">Course Description</h2>
+              <div className="bg-white p-6 rounded-lg shadow-sm animate-fade-in-delay-1">
+                <p className="text-gray-700 mb-4">
+                  This comprehensive CSS course is designed for both beginners and experienced developers. You'll learn everything from basic styling to advanced layout techniques and animations.
+                </p>
+                <p className="text-gray-700 mb-4">
+                  The course includes hands-on projects and real-world applications to help you build a strong foundation in CSS. You'll work on practical exercises, design challenges, and real-world projects that will prepare you for professional web development.
+                </p>
+                <p className="text-gray-700">
+                  By the end of this course, you'll be able to create beautiful, responsive, and modern web designs using CSS.
+                </p>
+              </div>
+            </div>
+
+            {/* Course Card */}
+            <div className="bg-white rounded-lg shadow-lg p-6 h-fit sticky top-6 animate-fade-in">
+              <div className="text-center mb-6">
+                <h3 className="text-2xl font-bold text-indigo-900">Start Learning CSS</h3>
+                <p className="text-gray-700 mt-2">Comprehensive CSS Styling Course</p>
+              </div>
+              <div className="space-y-4">
+                <div className="flex justify-between items-center p-3 bg-indigo-50 rounded-lg hover:scale-[1.02] transition-all duration-300">
+                  <span className="text-gray-700">Course Duration</span>
+                  <span className="font-semibold text-indigo-900">60+ Hours</span>
+                </div>
+                <div className="flex justify-between items-center p-3 bg-indigo-50 rounded-lg hover:scale-[1.02] transition-all duration-300">
+                  <span className="text-gray-700">Level</span>
+                  <span className="font-semibold text-indigo-900">Beginner to Advanced</span>
+                </div>
+                <div className="flex justify-between items-center p-3 bg-indigo-50 rounded-lg hover:scale-[1.02] transition-all duration-300">
+                  <span className="text-gray-700">Projects</span>
+                  <span className="font-semibold text-indigo-900">8+ Real-world Projects</span>
+                </div>
+                <div className="flex justify-between items-center p-3 bg-indigo-50 rounded-lg hover:scale-[1.02] transition-all duration-300">
+                  <span className="text-gray-700">Certificate</span>
+                  <span className="font-semibold text-indigo-900">Yes</span>
+                </div>
+                <Link 
+                  href="/payment/css"
+                  className="block w-full bg-gradient-to-r from-indigo-600 to-purple-600 text-white text-center py-4 rounded-lg font-semibold hover:from-indigo-700 hover:to-purple-700 transition-all duration-300 shadow-lg hover:shadow-xl hover:scale-[1.05] active:scale-[0.95]"
+                >
+                  Enroll Now
+                </Link>
+              </div>
+>>>>>>> 5f2268c3b0956d842dcc6046d530c96d51d42f13
             </div>
           </div>
         </div>
